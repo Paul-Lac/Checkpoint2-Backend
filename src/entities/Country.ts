@@ -20,10 +20,15 @@ export class Country extends BaseEntity {
   @Field()
   emoji: string = "";
 
-  constructor(code: string, name: string, emoji: string) {
+  @Column({ length: 10 })
+  @Field()
+  continent: string = "";
+
+  constructor(code: string, name: string, emoji: string, continent: string) {
     super();
     this.code = code;
     this.name = name;
     this.emoji = emoji;
+    this.continent = continent;
   }
 }

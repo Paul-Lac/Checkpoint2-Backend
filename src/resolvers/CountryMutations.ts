@@ -10,6 +10,8 @@ export class CountryInput {
   name!: string;
   @Field()
   emoji!: string;
+  @Field()
+  continent!: string;
 }
 
 @Resolver(Country)
